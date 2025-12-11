@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="id" class="cursor-none">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SYAHID | Digital Strategic Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;400;800;900&display=swap");
+
+      body {
+        font-family: "Archivo", sans-serif;
+        background-color: #0a0a0a;
+        color: #e5e5e5;
+      }
+
+      /* KURSOR KUSTOM (Micro-interaction ) */
+      .cursor-dot,
+      .cursor-outline {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: 9999;
+        pointer-events: none;
+      }
+      .cursor-dot {
+        width: 8px;
+        height: 8px;
+        background-color: white;
+      }
+      .cursor-outline {
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        transition: width 0.2s, height 0.2s, background-color 0.2s;
+      }
+
+      /* Efek Hover pada Kursor */
+      body.hovering .cursor-outline {
+        width: 80px;
+        height: 80px;
+        background-color: white;
+        mix-blend-mode: difference; /* Membuat warna terbalik saat kena teks */
+        border: none;
+      }
+
+      /* Tipografi Besar  */
+      .mega-text {
+        font-size: clamp(3rem, 10vw, 10rem);
+        line-height: 0.9;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: -0.02em;
+      }
+
+      .hover-reveal {
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .hover-reveal:hover {
+        transform: translateX(20px);
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav
+      class="fixed top-0 w-full p-8 flex justify-between items-center z-50 mix-blend-difference text-white"
+    >
+      <div
+        class="text-sm font-bold tracking-widest border border-white px-4 py-1 rounded-full"
+      >
+        S-DIGITAL
+      </div>
+
+      <button
+        onclick="toggleLanguage()"
+        class="interactable text-sm font-bold hover:underline underline-offset-4"
+      >
+        <span id="lang-label">EN / 🇮🇩</span>
+      </button>
+    </nav>
+
+    <main class="px-6 md:px-12 pt-32 pb-20">
+      <section
+        class="min-h-[80vh] flex flex-col justify-center border-b border-gray-800 pb-20"
+      >
+        <p
+          class="text-gray-500 mb-4 ml-2 text-lg"
+          data-id="Jangan sekadar online."
+          data-en="Don't just be online."
+        >
+          Jangan sekadar online.
+        </p>
+
+        <h1 class="mega-text mb-8">
+          <span class="block interactable" data-id="BANGUN" data-en="BUILD"
+            >BANGUN</span
+          >
+          <span
+            class="block text-gray-600 interactable"
+            data-id="ASET"
+            data-en="ASSETS"
+            >ASET</span
+          >
+          <span class="block interactable" data-id="DIGITAL." data-en="DIGITAL."
+            >DIGITAL.</span
+          >
+        </h1>
+
+        <div class="flex flex-col md:flex-row gap-8 md:items-end mt-8">
+          <p
+            class="max-w-md text-gray-400 leading-relaxed text-lg"
+            data-id="Website biasa hanya menghabiskan uang. Saya membangun sistem yang mengubah pengunjung menjadi klien setia."
+            data-en="Average websites cost money. I build systems that turn visitors into loyal clients."
+          >
+            Website biasa hanya menghabiskan uang. Saya membangun sistem yang
+            mengubah pengunjung menjadi klien setia.
+          </p>
+          <a
+            href="https://wa.me/6283838973642"
+            class="interactable bg-white text-black px-8 py-4 text-lg font-bold hover:bg-gray-200 transition inline-block w-max"
+          >
+            <span data-id="Mulai Sekarang" data-en="Start Now"
+              >Mulai Sekarang</span
+            >
+            <i class="fa-solid fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="py-24">
+        <div
+          class="flex items-end justify-between mb-16 border-b border-gray-800 pb-4"
+        >
+          <h2 class="text-4xl font-bold text-gray-700">01 / WORK</h2>
+          <span class="text-sm text-gray-500">2024 - 2025</span>
+        </div>
+
+        <div
+          class="group relative border-b border-gray-800 py-12 hover-reveal interactable"
+        >
+          <a
+            href="https://project-gs.vercel.app/"
+            target="_blank"
+            class="block"
+          >
+            <div
+              class="flex flex-col md:flex-row md:items-baseline justify-between mb-4"
+            >
+              <h3
+                class="text-5xl md:text-7xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-500 transition-all"
+              >
+                Project GS
+              </h3>
+              <span class="text-gray-500 font-mono mt-2 md:mt-0"
+                >WEB APP / VERCEL</span
+              >
+            </div>
+            <p
+              class="text-gray-400 max-w-xl text-lg"
+              data-id="Eksplorasi teknologi web modern dengan performa tinggi."
+              data-en="Exploring modern web technologies with high performance."
+            >
+              Eksplorasi teknologi web modern dengan performa tinggi.
+            </p>
+            <div
+              class="mt-6 text-sm font-bold text-white border-b border-white w-max pb-1"
+            >
+              <span data-id="LIHAT PROJECT" data-en="VIEW PROJECT"
+                >LIHAT PROJECT</span
+              >
+            </div>
+          </a>
+        </div>
+
+        <div
+          class="group relative border-b border-gray-800 py-12 hover-reveal interactable"
+        >
+          <a
+            href="https://freshkicks-demo.netlify.app"
+            target="_blank"
+            class="block"
+          >
+            <div
+              class="flex flex-col md:flex-row md:items-baseline justify-between mb-4"
+            >
+              <h3
+                class="text-5xl md:text-7xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-500 transition-all"
+              >
+                FreshKicks
+              </h3>
+              <span class="text-gray-500 font-mono mt-2 md:mt-0"
+                >LANDING PAGE / UMKM</span
+              >
+            </div>
+            <p
+              class="text-gray-400 max-w-xl text-lg"
+              data-id="Desain premium untuk binis cuci sepatu. Fokus pada konversi WhatsApp."
+              data-en="Premium design for shoe laundry. Focused on WhatsApp conversion."
+            >
+              Desain premium untuk binis cuci sepatu. Fokus pada konversi
+              WhatsApp.
+            </p>
+            <div
+              class="mt-6 text-sm font-bold text-white border-b border-white w-max pb-1"
+            >
+              <span data-id="LIHAT PROJECT" data-en="VIEW PROJECT"
+                >LIHAT PROJECT</span
+              >
+            </div>
+          </a>
+        </div>
+
+        <div
+          class="group relative border-b border-gray-800 py-12 opacity-50 cursor-not-allowed"
+        >
+          <div
+            class="flex flex-col md:flex-row md:items-baseline justify-between mb-4"
+          >
+            <h3 class="text-5xl md:text-7xl font-bold text-gray-600">
+              Portfolio V2
+            </h3>
+            <span class="text-gray-500 font-mono mt-2 md:mt-0"
+              >COMING SOON</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24">
+        <div
+          class="flex items-end justify-between mb-16 border-b border-gray-800 pb-4"
+        >
+          <h2 class="text-4xl font-bold text-gray-700">02 / VALUE</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12">
+          <div>
+            <h4 class="text-2xl font-bold mb-4 text-white">High Performance</h4>
+            <p class="text-gray-400 leading-relaxed">
+              <span
+                data-id="Website lambat = Kehilangan pelanggan. Kode saya bersih dan instan."
+                data-en="Slow sites = Lost customers. My code is clean and instant."
+              >
+                Website lambat = Kehilangan pelanggan. Kode saya bersih dan
+                instan.
+              </span>
+            </p>
+          </div>
+          <div>
+            <h4 class="text-2xl font-bold mb-4 text-white">Strategic UX</h4>
+            <p class="text-gray-400 leading-relaxed">
+              <span
+                data-id="Bukan cuma gambar bagus. Tata letak yang memandu orang untuk MEMBELI."
+                data-en="Not just pretty pictures. Layouts that guide people to BUY."
+              >
+                Bukan cuma gambar bagus. Tata letak yang memandu orang untuk
+                MEMBELI.
+              </span>
+            </p>
+          </div>
+          <div>
+            <h4 class="text-2xl font-bold mb-4 text-white">Scalable</h4>
+            <p class="text-gray-400 leading-relaxed">
+              <span
+                data-id="Dibangun untuk tumbuh. Siap untuk fitur baru di masa depan."
+                data-en="Built to grow. Ready for new features in the future."
+              >
+                Dibangun untuk tumbuh. Siap untuk fitur baru di masa depan.
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer
+        class="pt-20 border-t border-gray-800 text-center md:text-left flex flex-col md:flex-row justify-between items-center"
+      >
+        <div>
+          <h2 class="text-3xl font-bold mb-2">Let's Talk.</h2>
+          <a
+            href="mailto:mochamadsyahid573@gmail.com"
+            class="text-gray-500 hover:text-white interactable transition"
+            >mochamadsyahid573@gmail.com</a
+          >
+        </div>
+        <div class="mt-8 md:mt-0 text-gray-600 text-sm">
+          &copy; 2025 Syahid. Based on Brutalist Research.
+        </div>
+      </footer>
+    </main>
+
+    <script>
+    // 1. LOGIKA BAHASA (DIPERBAIKI: Menunjukkan Tujuan)
+    let isIndonesian = true; 
+
+    function toggleLanguage() {
+        isIndonesian = !isIndonesian;
+        const btnLabel = document.getElementById('lang-label');
+        
+        // Kalau sedang Indo, tombol tawarkan "ENGLISH". Kalau Inggris, tawarkan "INDONESIA"
+        if (isIndonesian) {
+            btnLabel.innerHTML = "→ ENGLISH"; 
+        } else {
+            btnLabel.innerHTML = "→ INDONESIA";
+        }
+
+        const elements = document.querySelectorAll('[data-id]');
+        elements.forEach(el => {
+            el.style.opacity = '0'; // Efek kedip halus
+            setTimeout(() => {
+                el.innerHTML = isIndonesian ? el.getAttribute('data-id') : el.getAttribute('data-en');
+                el.style.opacity = '1';
+            }, 200);
+        });
+    }
+
+    // Set tampilan awal tombol
+    document.getElementById('lang-label').innerHTML = "→ ENGLISH";
+
+    // 2. KURSOR INTERAKTIF
+    const cursorDot = document.querySelector('.cursor-dot');
+    const cursorOutline = document.querySelector('.cursor-outline');
+    
+    window.addEventListener('mousemove', (e) => {
+        const posX = e.clientX;
+        const posY = e.clientY;
+        cursorDot.style.left = `${posX}px`;
+        cursorDot.style.top = `${posY}px`;
+        cursorOutline.animate({ left: `${posX}px`, top: `${posY}px` }, { duration: 500, fill: "forwards" });
+    });
+
+    const interactables = document.querySelectorAll('.interactable, a, button');
+    interactables.forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
+    });
+</script>
+  </body>
+</html>
